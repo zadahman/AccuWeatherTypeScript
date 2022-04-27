@@ -1,0 +1,25 @@
+[
+  {
+    "LocalObservationDateTime": "2022-04-24T03:08:00-04:00",
+    "EpochTime": 1650784080,
+    "WeatherText": "Mostly clear",
+    "WeatherIcon": 34,
+    "HasPrecipitation": false,
+    "PrecipitationType": null,
+    "IsDayTime": false,
+    "Temperature": {
+      "Metric": {
+        "Value": 10,
+        "Unit": "C",
+        "UnitType": 17
+      },
+      "Imperial": {
+        "Value": 50,
+        "Unit": "F",
+        "UnitType": 18
+      }
+    },
+    "MobileLink": "http://www.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us"
+  }
+]
