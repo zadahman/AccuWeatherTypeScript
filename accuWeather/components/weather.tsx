@@ -46,7 +46,7 @@ async function fetchWeather(returnObj: object) {
 
 
   // use when accuweather is down
-  /*let json = require('../currentTest.json')[0]; 
+  /*let json = require('../testDocs/currentTest.json')[0]; 
 
   returnObj = ({...returnObj, 
     temperature: json.Temperature.Imperial.Value,
@@ -111,6 +111,7 @@ const Weather = () => {
                 <Text style={styles.tempText}>{Object(content).temperature}˚F</Text>
               </TouchableOpacity>
             </View>
+            <Text style={styles.locationText}>Click on the temperature above to get the weather details</Text>
             <View style={styles.bodyContainer}>
               <Text style={styles.title}>{Object(content).weatherCondition}</Text>
               <Text style={styles.locationText}>{Object(content).city}, {Object(content).state}</Text>

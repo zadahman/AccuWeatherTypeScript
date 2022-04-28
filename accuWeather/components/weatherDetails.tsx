@@ -37,7 +37,7 @@ async function fetchWeather(key: string) {
     });
 
   // use when accuweather server is down 
-  /*let res = require('../test.json');
+  /*let res = require('../testDocs/test.json');
   let resultObj = {
     minTemp: res.DailyForecasts[0].Temperature.Minimum.Value,
     maxTemp: res.DailyForecasts[0].Temperature.Maximum.Value,
