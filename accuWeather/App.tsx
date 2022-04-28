@@ -1,16 +1,14 @@
-
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, Text, View } from 'react-native';
 import Weather from './components/weather';
 import WeatherDetailsScreen from './components/weatherDetails';
 
-
-type RootStackParamList = {
+export type RootStackParamList = {
   Home: undefined;
-  CurrentWeather: undefined;
-  WeatherDeets: undefined;
+  Weather: undefined;
+  WeatherDeets: { currentWeather: Object; };
 };
 
 type Props = NativeStackScreenProps<RootStackParamList>;
@@ -22,27 +20,21 @@ function HomeScreen({ navigation } : Props) {
       <Button
         title="Get Current Weather Conditions"
         onPress={() => {
-          navigation.navigate('CurrentWeather');
+          navigation.navigate('Weather');
         }}
       />
     </View>
   );
 }
 
-function CurrentWeatherScreen({ navigation } : Props) {
-  return (
-    <Weather navigate={navigation} />
-  );
-}
-
 export default class App extends React.Component {
   render() {
-    const  Stack = createNativeStackNavigator();
+    const  Stack = createNativeStackNavigator<RootStackParamList>();
     return (
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="CurrentWeather" component={CurrentWeatherScreen} />
+          <Stack.Screen name="Weather" component={Weather} />
           <Stack.Screen name="WeatherDeets" component={WeatherDetailsScreen} />
         </Stack.Navigator>
       </NavigationContainer>

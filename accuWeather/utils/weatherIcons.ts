@@ -1,5 +1,4 @@
-
-export const weatherIcons = {
+export const weatherIcons: Object = {
     Sunny: {
         color: '#f7b733',
         icon: 'weather-sunny'
@@ -88,17 +87,9 @@ export const weatherIcons = {
         color: '#3a403d',
         icon: 'weather-night-partly-cloudy'
     },
-    Intermittent_clouds: {
-        color: '#3a403d',
-        icon: 'weather-windy-variant'
-    },
     Hazy_moonlight: {
         color: '#66573c',
         icon: 'mdi-weather-sunset-down'
-    },
-    Mostly_cloudy: {
-        color: '#2b2924',
-        icon: 'weather-cloudy'
     },
     Default: {
         color: '#9cf0aa',
