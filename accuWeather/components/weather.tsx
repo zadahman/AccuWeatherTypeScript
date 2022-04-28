@@ -102,7 +102,7 @@ const Weather = () => {
         ) : (
           <View style={styles.container}>
             <View style={styles.headerContainer}>
-              <TouchableOpacity onPress={() => navigation.navigate('WeatherDeets', { currentWeather: content })}>
+              <TouchableOpacity activeOpacity={0.73} style={styles.headerContainer} onPress={() => navigation.navigate('WeatherDeets', { currentWeather: content })}>
                 <MaterialCommunityIcons
                   size={72}
                   name={Object(weatherIcons)[weatherIconValue].icon}
@@ -111,7 +111,9 @@ const Weather = () => {
                 <Text style={styles.tempText}>{Object(content).temperature}˚F</Text>
               </TouchableOpacity>
             </View>
-            <Text style={styles.locationText}>Click on the temperature above to get the weather details</Text>
+            <View style={{alignItems: 'center'}}>
+              <Text style={styles.locationText}>Click on the temperature above!</Text>
+            </View>
             <View style={styles.bodyContainer}>
               <Text style={styles.title}>{Object(content).weatherCondition}</Text>
               <Text style={styles.locationText}>{Object(content).city}, {Object(content).state}</Text>
